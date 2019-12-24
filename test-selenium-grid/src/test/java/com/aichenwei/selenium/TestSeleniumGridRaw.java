@@ -7,6 +7,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 /**
  * 通过直接部署的方式测试Selenium Grid
@@ -31,6 +32,26 @@ public class TestSeleniumGridRaw {
         driver.get("http://www.baidu.com");
 
         System.in.read();
+    }
+
+    /**
+     * 测试docker版本的
+     *
+     * @throws Exception
+     */
+    @Test
+    public void testDocker() throws Exception {
+        DesiredCapabilities capability = new DesiredCapabilities();
+        capability.setBrowserName("chrome"); // 设置浏览器为谷歌浏览器
+
+        WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
+        driver.get("http://www.baidu.com");
+
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        System.out.println(driver.getTitle());
+
+        driver.close();
+        driver.quit();
     }
 
 }
