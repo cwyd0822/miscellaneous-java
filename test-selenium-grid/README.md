@@ -44,7 +44,7 @@ Selenium Grid 的部署
 ```shell script
 java -jar selenium-server-standalone-4.0.0-alpha-2.jar -role hub
 ```
-![output](https://aichenwei.oss-ap-southeast-1.aliyuncs.com/github/test-com.selenium-grid/2.png)
+![output](https://aichenwei.oss-ap-southeast-1.aliyuncs.com/github/test-selenium-grid/2.png)
 所有可支持操作系统都能调用该命令。需要注意的是根据selenium-server-standalone 版本的不同，jar 文件名里的版本号需要有相应改动。Hub 启动的默认端口号为4444，用户可通过 -port 参数来定义其启动端口
 ```shell script
 java -jar com.seleniumnium -role hub -port 8888
