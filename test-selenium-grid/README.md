@@ -19,7 +19,7 @@
 >
 > Selenium Grid实际它是基于Selenium RC的，而所谓的分布式结构就是由一个hub节点和若干个node代理节点组成。Hub用来管理各个代理节点的注册信息和状态信息，并且接受远程客户端代码的请求调用，然后把请求的命令转发给代理节点来执行。下面结合环境部署来理解Hub与node节点的关系。
 
-![hub-node](https://aichenwei.oss-ap-southeast-1.aliyuncs.com/github/test-com.selenium-grid/hub_and_nodes.jpg)
+![hub-node](https://aichenwei.oss-ap-southeast-1.aliyuncs.com/github/test-selenium-grid/hub_and_nodes.jpg)
 
 ### Selenium Grid使用场景
 比如当自动化测试用例达到一定数量的时候，比如上万，一台机器执行全部测试用例耗时5个小时(只是举例，真正的耗时是需要根据测试用例场景的复杂度决定的)，而如果需要覆盖主流浏览器比如Chrome、Firefox，加起来就是10个小时；这时候领导跟你说有什么办法可以解决这个执行速度？当然最笨的办法就是另外拿台机器，然后部署环境，把测试用例分开去执行然后合并结果即可。而Selenium也想到了这点，所以有了Selenium Grid的出现，它就是解决分布式执行测试的痛点。
