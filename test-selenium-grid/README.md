@@ -27,16 +27,16 @@
 ## 一般环境部署方法（非docker）
 下面通过一般方式部署来演示Selenium Grid的使用方法和使用场景。
 
-Selenium Grid 包含一个Hub 和至少一个 Node，两者都可由 com.selenium-server-standalone.jar 文件启动
+Selenium Grid 包含一个Hub 和至少一个 Node，两者都可由 selenium-server-standalone.jar 文件启动
 
 Selenium Grid 的部署
 
-1.安装Selenium Grid ：从Selenium 官网下载 com.selenium-server-standalone.jar 文件即可。Java 可执行文件的路径必须正确，这样才能从命令行运行文件，如果运行出错，检查系统的路径变量看其是否依据包括Java 可执行文件的路径
+1.安装Selenium Grid ：从Selenium 官网下载 selenium-server-standalone.jar 文件即可。Java 可执行文件的路径必须正确，这样才能从命令行运行文件，如果运行出错，检查系统的路径变量看其是否依据包括Java 可执行文件的路径
 
 2.启动Selenium Grid ：一般而言，运行Selenium Grid 需要先启动Hub，因为 Node 的调用依赖于 Hub
 
 ### 下载selenium-server-standalone-4.0.0-alpha-2.jar
-- [下载地址](http://com.selenium-release.storage.googleapis.com/index.html)
+- [下载地址](http://selenium-release.storage.googleapis.com/index.html)
 
 - [百度网盘](https://pan.baidu.com/s/1JNSDM9JqH83gs4jY0jUN7w)，密码：qkgx
 
@@ -47,7 +47,7 @@ java -jar selenium-server-standalone-4.0.0-alpha-2.jar -role hub
 ![output](https://aichenwei.oss-ap-southeast-1.aliyuncs.com/github/test-selenium-grid/2.png)
 所有可支持操作系统都能调用该命令。需要注意的是根据selenium-server-standalone 版本的不同，jar 文件名里的版本号需要有相应改动。Hub 启动的默认端口号为4444，用户可通过 -port 参数来定义其启动端口
 ```shell script
-java -jar com.seleniumnium -role hub -port 8888
+java -jar selenium-server-standalone-4.0.0-alpha-2.jar -role hub -port 8888
 ```
 可通过浏览器中输入如下地址来检查 Hub 是否启动成功：
 
